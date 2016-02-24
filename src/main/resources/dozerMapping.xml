@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+	<configuration>
+		<custom-converters>
+			<converter type="com.pd.app.CustomTimestampConverter">
+				<class-a>java.lang.String</class-a>
+				<class-b>java.sql.Timestamp</class-b>
+			</converter>
+		 </custom-converters>
+	</configuration>
+	
+	<mapping date-format="MM/dd/yyyy" 	map-null="false" map-empty-string="false" >
+		<class-a>java.util.Map</class-a>
+		<class-b>com.pd.app.Person</class-b>
+	</mapping>
+</mappings>
